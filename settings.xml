@@ -1,0 +1,31 @@
+<settings>
+    <profiles>
+        <profile>
+            <id>epam-test-app-java_app</id>
+            <activation>
+            <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+            <repository>
+                <id>epam-test-app-java_app</id>
+                <url>https://epam-test-app-324037290375.d.codeartifact.eu-central-1.amazonaws.com/maven/java_app/</url>
+            </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <servers>
+        <server>
+            <id>epam-test-app-java_app</id>
+            <username>aws</username>
+            <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+        </server>
+    </servers>
+    <mirrors>
+        <mirror>
+            <id>epam-test-app-java_app</id>
+            <name>epam-test-app-java_app</name>
+            <url>https://epam-test-app-324037290375.d.codeartifact.eu-central-1.amazonaws.com/maven/java_app/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
+</settings>
